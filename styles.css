@@ -1,0 +1,53 @@
+/* CSS for styling the table */
+.container {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  button
+  {
+    background-color: #dddddd;
+    border: none;
+  }
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      border-bottom: 3px solid #dddddd;
+      display: block;
+      margin-bottom: 10px;
+    }
+    table td {
+      border-bottom: 1px solid #dddddd;
+      display: block;
+      text-align: right;
+    }
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+    }
+  }
+  
